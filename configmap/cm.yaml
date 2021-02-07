@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config
+  namespace: default
+data:
+  mykey: myvalue
+  otherkey: othervalue
+  myfile: |
+    This is a file!
+    There are two lines
