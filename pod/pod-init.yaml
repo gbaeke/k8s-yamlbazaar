@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web
+  labels:
+    app: web
+spec:
+  containers:
+    - name: web
+      image: nginx
+      ports:
+        - name: web
+          containerPort: 80
+          protocol: TCP
+  initContainers:
+    - name: init1
+      image: busybox
+      command:
+        - sleep
+        - "10"
+    - name: init2
+      image: busybox
+      command:
+        - sleep
+        - "10"
